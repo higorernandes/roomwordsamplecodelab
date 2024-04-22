@@ -5,14 +5,17 @@ coreKtx = "1.13.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
+androidx-junit = "1.1.5"
 appcompat = "1.6.1"
 material = "1.11.0"
-room = "2.6.1"
+room-ktx = "2.6.1"
+room-runtime = "2.6.1"
 room-compiler = "2.6.1"
 room-testing = "2.6.1"
 viewmodel = "2.7.0"
 livedata = "2.7.0"
 common = "2.7.0"
+activity = "1.9.0"
 constraintlayout = "2.1.4"
 
 [libraries]
@@ -20,13 +23,16 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-junit" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "viewmodel" }
 androidx-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "livedata" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-common-java8 = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "common" }
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room-ktx" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room-runtime" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room-compiler" }
 room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room-testing" }
 

@@ -1,5 +1,3 @@
-package com.example.android.roomwordsample;
-
 /*
  * Copyright (C) 2017 Google Inc.
  *
@@ -16,16 +14,16 @@ package com.example.android.roomwordsample;
  * limitations under the License.
  */
 
-import androidx.lifecycle.LiveData;
-import androidx.room.Dao;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
-import androidx.room.Query;
+package com.example.android.roomwordsample
 
-import java.util.List;
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 /**
- * The Room Magic is in this file, where you map a Java method call to an SQL query.
+ * The Room Magic is in this file, where you map a method call to an SQL query.
  *
  * When you are using complex data types, such as Date, you have to also supply type converters.
  * To keep this example basic, no types that require type converters are used.
@@ -34,18 +32,16 @@ import java.util.List;
  */
 
 @Dao
-public interface WordDao {
+interface WordDao {
 
-    // LiveData is a data holder class that can be observed within a given lifecycle.
-    // Always holds/caches latest version of data. Notifies its active observers when the
-    // data has changed. Since we are getting all the contents of the database,
-    // we are notified whenever any of the database contents have changed.
+    // The flow always holds/caches latest version of data. Notifies its observers when the
+    // data has changed.
     @Query("SELECT * FROM word_table ORDER BY word ASC")
-    LiveData<List<Word>> getAlphabetizedWords();
+    fun getAlphabetizedWords(): Flow<List<Word>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Word word);
+    suspend fun insert(word: Word)
 
     @Query("DELETE FROM word_table")
-    void deleteAll();
+    suspend fun deleteAll()
 }
