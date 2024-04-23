@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordsample
+package com.example.android.roomwordsample.db
 
 import android.content.Context
 import androidx.room.Database
@@ -94,6 +94,8 @@ abstract class WordRoomDatabase : RoomDatabase() {
             var word = Word("Hello")
             wordDao.insert(word)
             word = Word("World!")
+            wordDao.insert(word)
+            word = Word("Potato")
             wordDao.insert(word)
         }
     }

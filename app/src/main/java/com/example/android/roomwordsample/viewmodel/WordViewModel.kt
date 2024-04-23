@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordsample
+package com.example.android.roomwordsample.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.android.roomwordsample.db.Word
+import com.example.android.roomwordsample.db.WordRepository
 import kotlinx.coroutines.launch
 
 /**

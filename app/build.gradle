@@ -40,7 +40,7 @@ dependencies {
     // Room components
     implementation libs.room.ktx
     implementation libs.room.runtime
-    annotationProcessor libs.room.compiler
+    kapt libs.room.compiler
     androidTestImplementation libs.room.testing
 
     // Lifecycle components

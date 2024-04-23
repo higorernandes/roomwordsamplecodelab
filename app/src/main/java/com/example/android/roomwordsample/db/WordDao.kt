@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordsample
+package com.example.android.roomwordsample.db
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -32,7 +32,7 @@ import kotlinx.coroutines.flow.Flow
  */
 
 @Dao
-interface WordDao {
+interface WordDao { // Data Access Object - Objeto de acesso a dados
 
     // The flow always holds/caches latest version of data. Notifies its observers when the
     // data has changed.

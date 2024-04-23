@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordsample
+package com.example.android.roomwordsample.view
 
 import android.app.Activity
 import android.content.Intent
@@ -25,6 +25,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.roomwordsample.R
+import com.example.android.roomwordsample.db.Word
+import com.example.android.roomwordsample.viewmodel.WordViewModel
+import com.example.android.roomwordsample.viewmodel.WordViewModelFactory
+import com.example.android.roomwordsample.WordsApplication
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {

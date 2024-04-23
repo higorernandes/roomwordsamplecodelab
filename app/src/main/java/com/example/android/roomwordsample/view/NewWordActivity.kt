@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.roomwordsample
+package com.example.android.roomwordsample.view
 
 import android.app.Activity
 import android.content.Intent
@@ -23,6 +23,7 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android.roomwordsample.R
 
 /**
  * Activity for entering a word.

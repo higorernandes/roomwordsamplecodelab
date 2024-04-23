@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.roomwordsample
+package com.example.android.roomwordsample.db
 
 import androidx.annotation.WorkerThread
 import kotlinx.coroutines.flow.Flow
